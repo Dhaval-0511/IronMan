@@ -28,7 +28,7 @@ export default function Navbar() {
     >
       <div className="flex items-center gap-2.5 font-display text-lg font-bold tracking-wider">
         <span className="h-2.5 w-2.5 animate-pulse rounded-full bg-cyan shadow-[0_0_12px_var(--cyan)]" />
-        M A R K &mdash; HUD
+        M A R K &mdash; LXXXV
       </div>
 
       <div className="hidden items-center gap-10 font-mono text-xs uppercase tracking-[0.12em] text-muted md:flex">
