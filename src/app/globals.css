@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+:root {
+  --background: #07070a;
+  --panel: #0e0f14;
+  --panel-2: #131520;
+  --line: rgba(255, 255, 255, 0.08);
+  --foreground: #eef0f4;
+  --muted: #8a8d9a;
+  --red: #e0261d;
+  --red-dim: #6e1512;
+  --gold: #e8b23d;
+  --cyan: #5fe1ff;
+
+  --card-shadow: 10px 10px 24px rgba(0, 0, 0, 0.55), -6px -6px 18px rgba(255, 255, 255, 0.02),
+    inset 1px 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-panel: var(--panel);
+  --color-panel-2: var(--panel-2);
+  --color-line: var(--line);
+  --color-muted: var(--muted);
+  --color-red: var(--red);
+  --color-red-dim: var(--red-dim);
+  --color-gold: var(--gold);
+  --color-cyan: var(--cyan);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-display: "Rajdhani", var(--font-geist-sans), sans-serif;
+}
+
+html {
+  scroll-behavior: auto;
+  background: var(--background);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), sans-serif;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+.display {
+  font-family: var(--font-display), sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.neu-card {
+  background: linear-gradient(160deg, var(--panel-2), var(--panel));
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  box-shadow: var(--card-shadow);
+}
+
+.eyebrow-line::before {
+  content: "";
+  width: 22px;
+  height: 1px;
+  background: var(--gold);
+  display: inline-block;
+}
+
+::selection {
+  background: var(--cyan);
+  color: #07070a;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
